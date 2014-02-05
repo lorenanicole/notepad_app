@@ -1,0 +1,16 @@
+<div class="container">
+  <div id="note_content">
+    <h1><%= @note.title %></h1>
+    <p><%= @note.content %></p>
+    <a href="/">Note Tote Home</a>
+    <input id="update" data-id="<%= @note.id %>" type="submit" value="Update this Rambling?">
+    <input id="delete" data-id="<%= @note.id %>" type="submit" value="DESTROY THIS RAMBLING">
+  </div>
+  <div id="update_form">
+    <form id="updating" action="/save" data-id = "" method="post">
+      <input id="update_title" type="text" name="title" value="">
+      <textarea id="update_content" name="content"></textarea>
+      <input type="submit" value="Update it!">
+    </form>
+  </div>
+</div>
